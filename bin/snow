@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+"use strict";
+
+const program = require("commander"); // 编写指令和处理命令行
+process.env.NODE_PATH = __dirname + "/../node_modules/";
+
+// 定义当前版本
+program.version(require("../package").version)
+.usage("<command> [options]");
+
+// 定义添加模版
+program
+  .command("init")
+  .description("添加模版")
+  .action(() => {
+    require("../command/init");
+  });
+
+//   // 定义del模版
+// program
+//   .command("delete")
+//   .description("删除模版")
+//   .alias("del")
+//   .action(() => {
+//     require("../command/del");
+//   });
+
+// 解析命令行参数
+program.parse(process.argv);
+
+if (!program.args.length) {
+  program.help();
+}

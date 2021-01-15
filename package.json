@@ -1,0 +1,22 @@
+{
+  "name": "snow_cli",
+  "version": "1.0.0",
+  "description": "雪花前端团队自动化脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tongwenfan",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.1",
+    "execa": "^5.0.0",
+    "inquirer": "^7.3.3",
+    "ora": "^5.2.0",
+    "shelljs": "^0.8.4"
+  },
+  "bin": {
+    "snow": "bin/snow"
+  }
+}
