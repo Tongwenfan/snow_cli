@@ -11,6 +11,7 @@ const execa = require('execa'); //  node 端去执行 shell 命令
 // 第一个参数就是类型[github/gitlab/Bitbucket]:[账户名]/[仓库名]
 const urlObj = {
     'wx-template': `https://github.com/Tongwenfan/wx-template.git`,
+    "vue-h5-template":'https://github.com/Tongwenfan/vue-h5-template.git',
     'react-template': `https://github.com/Tongwenfan/create-react-temp.git`,
 }
 let question = [
@@ -35,6 +36,7 @@ let question = [
         choices: [
             "wx-template",
             "react-template",
+            "vue-h5-template"
 
         ],
         filter: function (val) { // 使用filter将回答变为小写
